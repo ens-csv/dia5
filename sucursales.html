@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Contact</title>
+	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -23,6 +23,12 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
@@ -32,7 +38,7 @@
 <body class="animsition">
 
 	<!-- Header -->
-	<header class="header-v4">
+	<header>
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
@@ -62,7 +68,7 @@
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop how-shadow1">
+			<div class="wrap-menu-desktop">
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
@@ -83,10 +89,10 @@
 							</li>
 							<li>
 							</li>
-							<li>
+							<li class="active-menu">
 								<a href="sucursales.html">Sucursales</a>
 							</li>
-							<li class="active-menu">
+							<li>
 								<a href="contact.html">Sugerencias</a>
 							</li>
 						</ul>
@@ -102,7 +108,7 @@
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
-						<a href="#" class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
+						<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
 					</div>
@@ -146,14 +152,14 @@
 			<ul class="topbar-mobile">
 				<li>
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						Envio gratis a partir de $1000 mxn
 					</div>
 				</li>
 
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
+							Ayuda & FAQs
 						</a>
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
@@ -174,7 +180,11 @@
 			<ul class="main-menu-m">
 				<li>
 					<a href="index.html">Home</a>
-
+					<ul class="sub-menu-m">
+						<li><a href="index.html">Homepage 1</a></li>
+						<li><a href="home-02.html">Homepage 2</a></li>
+						<li><a href="home-03.html">Homepage 3</a></li>
+					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</span>
@@ -185,7 +195,19 @@
 				</li>
 
 				<li>
-					<a href="contact.html">Sugerencias</a>
+					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+				</li>
+
+				<li>
+					<a href="blog.html">Blog</a>
+				</li>
+
+				<li>
+					<a href="about.html">About</a>
+				</li>
+
+				<li>
+					<a href="contact.html">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -214,7 +236,7 @@
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
 				<span class="mtext-103 cl2">
-					Your Cart
+					Carrito
 				</span>
 
 				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
@@ -231,7 +253,7 @@
 
 						<div class="header-cart-item-txt p-t-8">
 							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								White Shirt Pleat
+								Camisa Blanca Plisada
 							</a>
 
 							<span class="header-cart-item-info">
@@ -280,11 +302,11 @@
 
 					<div class="header-cart-buttons flex-w w-full">
 						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-							View Cart
+							Ver Carrito
 						</a>
 
 						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-							Check Out
+							Pagar
 						</a>
 					</div>
 				</div>
@@ -293,95 +315,94 @@
 	</div>
 
 
-	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
-		<h2 class="ltext-105 cl0 txt-center">
-			Sugerencias
-		</h2>
-	</section>
-
-
-	<!-- Content page -->
-	<section class="bg0 p-t-104 p-b-116">
+	<div class="bg0 m-t-10 p-b-80">
 		<div class="container">
-			<div class="flex-w flex-tr">
-				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
-					<form>
-						<h4 class="mtext-105 cl2 txt-center p-b-30">
-							Envianos Sugerencias
-						</h4>
 
-						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address">
-							<img class="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON">
-						</div>
 
-						<div class="bor8 m-b-30">
-							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="How Can We Help?"></textarea>
-						</div>
 
-						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
-							Enviar
-						</button>
-					</form>
+		</div>
+	</div>
+
+	<!-- Slider -->
+	<!-- Services -->
+	<section id="services" style= "padding-top: 100px;" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
 				</div>
-
-				<div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
-					<div class="flex-w w-full p-b-42">
-						<span class="fs-18 cl5 txt-center size-211">
-							<span class="lnr lnr-map-marker"></span>
-						</span>
-
-						<div class="size-212 p-t-2">
-							<span class="mtext-110 cl2">
-								HeadQuarters
-							</span>
-
-							<p class="stext-115 cl6 size-213 p-t-18">
-								Avenida Real De San Agustin 222, Zona San Agustín, 66260 San Pedro Garza García, N.L.
-							</p>
-						</div>
-					</div>
-
-					<div class="flex-w w-full p-b-42">
-						<span class="fs-18 cl5 txt-center size-211">
-							<span class="lnr lnr-phone-handset"></span>
-						</span>
-
-						<div class="size-212 p-t-2">
-							<span class="mtext-110 cl2">
-								Lets Talk
-							</span>
-
-							<p class="stext-115 cl1 size-213 p-t-18">
-								+ 1 800 427 7895
-							</p>
-						</div>
-					</div>
-
-					<div class="flex-w w-full">
-						<span class="fs-18 cl5 txt-center size-211">
-							<span class="lnr lnr-envelope"></span>
-						</span>
-
-						<div class="size-212 p-t-2">
-							<span class="mtext-110 cl2">
-								Sale Support
-							</span>
-
-							<p class="stext-115 cl1 size-213 p-t-18">
-								annie.store@gmail.com
-							</p>
-						</div>
-					</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-6">
+					<span class="fa-stack fa-4x">
+						<i class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading">Monterrey</h4>
+					<p class="text-muted">Dirección: Padre Mier No.501-A Oriente Colonia Zona Centro Delegación Monterrey Nuevo León</p>
+				</div>
+				<div class="col-md-6">
+					<span class="fa-stack fa-4x">
+						<i class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading">Plaza Cumbres</h4>
+					<p class="text-muted">Dirección: Av. Hacienda Peñuelas No.6771 Colonia Residencial Cumbres Delegación Monterrey Nuevo León</p>
 				</div>
 			</div>
 		</div>
 	</section>
-
-
-
-
+	<section id="services" style= "padding-top: 100px;" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-6">
+					<span class="fa-stack fa-4x">
+						<i class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading">Plaza Fiesta San Agustín</h4>
+					<p class="text-muted">Dirección: Av. Real de San Agustín No.222 Locales 14, 15 y 16 Colonia Residencial San Agustín Delegación San Pedro Garza García Nuevo León</p>
+				</div>
+				<div class="col-md-6">
+					<span class="fa-stack fa-4x">
+						<i class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading">Plaza Outlet Monterrey</h4>
+					<p class="text-muted">Dirección: Av. Manuel L. Barragán No.220 Local 80 Colonia Exhacienda El Canadá Delegación General Escobedo Nuevo León</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="services" style= "padding-top: 100px;" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-6">
+					<span class="fa-stack fa-4x">
+						<i class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading">Consultoría</h4>
+					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+				</div>
+				<div class="col-md-6">
+					<span class="fa-stack fa-4x">
+						<i class="fas fa-circle fa-stack-2x text-primary"></i>
+						<i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+					</span>
+					<h4 class="service-heading">Outsourcing</h4>
+					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
@@ -541,6 +562,17 @@
 		</span>
 	</div>
 
+	<!-- Modal1 -->
+	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
+		<div class="overlay-modal1 js-hide-modal1"></div>
+
+		<div class="container">
+			<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+				<button class="how-pos3 hov3 trans-04 js-hide-modal1">
+					<img src="images/icons/icon-close.png" alt="CLOSE">
+				</button>
+
+
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -559,7 +591,70 @@
 		})
 	</script>
 <!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/slick/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/parallax100/parallax100.js"></script>
+	<script>
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
 	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script>
+		$('.gallery-lb').each(function() { // the containers for all your galleries
+			$(this).magnificPopup({
+		        delegate: 'a', // the selector for gallery item
+		        type: 'image',
+		        gallery: {
+		        	enabled:true
+		        },
+		        mainClass: 'mfp-fade'
+		    });
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script>
+		$('.js-addwish-b2').on('click', function(e){
+			e.preventDefault();
+		});
+
+		$('.js-addwish-b2').each(function(){
+			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-b2');
+				$(this).off('click');
+			});
+		});
+
+		$('.js-addwish-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-detail');
+				$(this).off('click');
+			});
+		});
+
+		/*---------------------------------------------*/
+
+		$('.js-addcart-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+
+	</script>
 <!--===============================================================================================-->
 	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
@@ -577,9 +672,6 @@
 			})
 		});
 	</script>
-<!--===============================================================================================-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
